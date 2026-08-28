@@ -26,10 +26,6 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="main-content">
-        <div className="side-title-container">
-          <h1 className="main-title-bn">সত্যজিৎ রায়</h1>
-          <p className="main-subtitle">A Tribute to Manik Da</p>
-        </div>
       </main>
 
       {/* Player Component */}
