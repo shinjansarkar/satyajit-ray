@@ -119,12 +119,15 @@ function startLiveCounter() {
     if (!listenerEl) return;
     
     if (typeof io !== 'undefined') {
-        const socket = io();
+        // IMPORTANT: Replace this URL with your actual Render URL after deploying!
+        // Example: const socket = io('https://my-backend.onrender.com');
+        const socket = io('https://YOUR_RENDER_APP_NAME.onrender.com');
+        
         socket.on('visitorCountUpdate', (count) => {
             listenerEl.textContent = `${count} here now`;
         });
     } else {
-        // Fallback if server is not running
+        // Fallback
         listenerEl.textContent = `1 here now`;
     }
 }
