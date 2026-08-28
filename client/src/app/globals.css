@@ -28,7 +28,7 @@ body {
 .bg-image {
     position: absolute;
     inset: 0;
-    background-image: url('image.png');
+    background-image: url('/image.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -153,7 +153,7 @@ body {
     height: 100%;
     border-radius: 50%;
     border: 1px solid rgba(255,255,255,0.2);
-    background-image: url('image.png');
+    background-image: url('/image.png');
     background-size: cover;
     background-position: center;
     position: relative;
