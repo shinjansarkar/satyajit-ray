@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#05060c">
+    <title>Manik Da - Satyajit Ray Tribute</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;600;700&family=Hind+Siliguri:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- BACKGROUND & OVERLAYS -->
+    <div class="bg-wrapper">
+        <div class="bg-image"></div>
+    </div>
+
+    <!-- TOP BADGES -->
+    <div class="top-badges fade-in delay-2">
+        <div class="badge">
+            <span class="live-dot"></span>
+            <span id="listener-count">1 here now</span>
+        </div>
+        <div class="badge">
+            <span id="time-clock">00:00 IST</span>
+        </div>
+    </div>    
+        <!-- Animated Particles / Lamp Glows -->
+        <div class="lamp-glow lg-1"></div>
+        <div class="lamp-glow lg-2"></div>
+        
+        <span class="particle p-1"></span>
+        <span class="particle p-2"></span>
+        <span class="particle p-3"></span>
+    </div>
+
+    <main class="main-content">
+    </main>
+
+    <!-- HIDDEN YT PLAYER -->
+    <div id="yt-player-container" class="hidden-player"></div>
+
+    <!-- GLASSMORPHIC BOTTOM PLAYER -->
+    <div class="bottom-player-wrapper fade-in delay-4">
+        <div class="glass-panel bottom-player">
+            <!-- Left: Thumbnail & Info -->
+            <div class="player-info">
+                <div class="thumb-wrapper">
+                    <div class="thumb-container thumb-spin">
+                        <div class="thumb-hole"></div>
+                    </div>
+                </div>
+                <div class="track-details">
+                    <div class="track-title" id="track-title">সত্যজিৎ রায়ের সুর</div>
+                    <div class="track-artist">Manik Da · Playlist</div>
+                </div>
+            </div>
+            
+            <!-- Center: Controls -->
+            <div class="player-controls">
+                <button id="btn-prev" class="control-btn" aria-label="Previous">
+                    <i data-lucide="skip-back"></i>
+                </button>
+                <button id="btn-play" class="play-btn" aria-label="Play/Pause">
+                    <i data-lucide="play" id="play-icon"></i>
+                </button>
+                <button id="btn-next" class="control-btn" aria-label="Next">
+                    <i data-lucide="skip-forward"></i>
+                </button>
+            </div>
+            
+            <!-- Right/Bottom: Scrubber & Volume -->
+            <div class="player-scrubber">
+                <span id="time-current" class="time-text">0:00</span>
+                <div class="progress-container">
+                    <input type="range" id="seek-bar" min="0" max="100" value="0" class="slider" aria-label="Seek">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span id="time-duration" class="time-text">0:00</span>
+                
+                <button id="btn-playlist" class="control-btn" aria-label="Playlist">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PLAYLIST PANEL -->
+    <div id="playlist-panel" class="playlist-panel hidden">
+        <div class="playlist-header">
+            <h3>Up Next</h3>
+            <button id="btn-close-playlist" class="control-btn"><i data-lucide="x"></i></button>
+        </div>
+        <ul class="playlist-list" id="playlist-list">
+            <!-- Populated by JS -->
+        </ul>
+    </div>
+
+    <!-- Lucide Icons Script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
